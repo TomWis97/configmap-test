@@ -1,0 +1,24 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: configmap-test-sa
+rules:
+  - apiGroups:
+      - ""
+    resources:
+      - configmaps
+    resourceNames:
+      - configmap-test
+    verbs:
+      - create
+      - delete
+      - get
+      - update
+      - patch
+  - apiGroups: ["apps"]
+    resources: ["deployments"]
+    resourceNames: ["configmap-test"]
+    verbs:
+      - update
+      - patch

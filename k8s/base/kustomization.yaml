@@ -1,0 +1,10 @@
+commonLabels:
+  app: configmap-test
+
+resources:
+  - deployment.yaml
+  - configmap.yaml
+  - service.yaml
+  - serviceaccount.yaml
+  - role.yaml
+  - rolebinding.yaml
