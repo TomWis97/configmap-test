@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<head>
+    <title>ConfigMap Demo</title>
+    <style>
+        body {
+            background-color: {{ background_color }};
+        }
+    </style>
+</head>
+<body>
+    <div id="form">
+        <h1>Change background color:</h1>
+        <form action="/update" method="post">
+            <input type="color" name="color"/>
+            <input type="submit" value="Update"/>
+        </form>
+    </div>
+</body>
